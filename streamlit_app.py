@@ -4,9 +4,9 @@ from snowflake.snowpark.functions import col
 
 # Title of app
 st.title("My Parents New Healthy Diner")
-st.write('Breakfast Menu\n' + 
-         'Omega 3 & Blueberry Oatmeal\n' + 
-         'Kale, Spinach & Rocket Smoothie\n' + 
+st.write('Breakfast Menu/n' + 
+         'Omega 3 & Blueberry Oatmeal/n' + 
+         'Kale, Spinach & Rocket Smoothie/n' + 
          'Hard-Boiled Free-Range Egg')
 
 # Name on the order
