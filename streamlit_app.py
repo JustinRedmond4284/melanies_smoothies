@@ -3,18 +3,15 @@ import streamlit as st
 from snowflake.snowpark.functions import col
 
 # Title of app
-st.title("My Parents New Healthy Diner")
-st.write('Breakfast Menu' + '\n' + 
-         'Omega 3 & Blueberry Oatmeal' + '\n' + 
-         'Kale, Spinach & Rocket Smoothie' + '\n' + 
-         'Hard-Boiled Free-Range Egg')
+st.title(":cup_with_straw: Customize Your Smoothie! :cup_with_straw:")
+st.write('Choose the fruits you want in your custom Smoothie!')
 
 # Name on the order
 name_on_order = st.text_input("Name on Smoothie")
 st.write('The name on your Smoothie will be:', name_on_order)
 
 cnx = st.connection("snowflake")
-session = cns.session()
+session = cnx.session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 
 ingredients_list = st.multiselect(
