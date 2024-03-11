@@ -3,8 +3,11 @@ import streamlit as st
 from snowflake.snowpark.functions import col
 
 # Title of app
-st.title(":cup_with_straw: Customize Your Smoothie! :cup_with_straw:")
-st.write('Choose the fruits you want in your custom Smoothie!')
+st.title("My Parents New Healthy Diner)
+st.write('Breakfast Menu\n' + 
+         'Omega 3 & Blueberry Oatmeal\n' + 
+         'Kale, Spinach & Rocket Smoothie\n' + 
+         'Hard-Boiled Free-Range Egg')
 
 # Name on the order
 name_on_order = st.text_input("Name on Smoothie")
